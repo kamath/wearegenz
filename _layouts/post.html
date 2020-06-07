@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-{% assign author = site.data.authors[page.author] %}
+{% for author in site.authors %}
+{% assign author_id = author.id | replace: "/authors/", "" %}
+{% if author_id == page.author %}
 <div class="container">
 	<div id="banner" style="height: 500px; background: url({{page.img}}); background-size: cover; background-repeat: no-repeat; margin-top: 50px; background-position: center center">
     </div>
@@ -17,7 +19,10 @@ layout: default
         </h5>
     </div>
     <br>
+    <b>{{ page.date | date: "%B %-d, %Y" }}</b>
     <div class="content wow fadeIn" data-wow-delay="300ms">
         {{content}}
     </div>
 </div>
+{% endif %}
+{% endfor %}
