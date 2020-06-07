@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="container">
+    <h1 class="merriweather">Posts</h1>
+    <div class="row">
+        {% for post in site.posts %}
+        {% assign author = site.data.authors[post.author] %}
+        <div class="col s12 m4 wow fadeIn" data-wow-delay="{{forloop.index | times: 10}}ms">
+            <div class="card hoverable">
+                <div class="card-image">
+                    <img src="{{ post.img }}">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <span class="card-title merriweather">{{ post.title }}</span>
+                        <p>{{ post.date | date: "%B %-d" }} - {{ post.description }}</p>
+                        <p><strong>{{ author.name }}</strong></p>
+                    </div>
+                    <div class="card-action">
+                        <a class="grey-text text-darken-4" href="{{site.baseurl}}/{{ post.url }}">Read More <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Defunding the police sounds radical until you realize realize we’ve been defunding education for years.</p>&mdash; T.J. McKay (@CoachTJMcKay) <a href="https://twitter.com/CoachTJMcKay/status/1269315660238041089?ref_src=twsrc%5Etfw">June 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <h1>BLM and Me</h1>
+    {% for post in site.links %}
+    {% if post.type == "email" %}
+    {% assign body = post.body | newline_to_br | strip_newlines | replace: '<br />', '%0D%0A%0D%0A' %}
+    <h5>{{post.representation}} -
+        <a href="mailto:{{post.addresses}}?subject={{post.subject}}&body={{body}}">
+            {{post.title}}
+        </a>
+    </h5>
+    <p>{{post.impact}}</p>
+    {% endif %}
+    {% endfor %}
+    {{ content }}
+    <h4>Have more links to contribute? <a href="https://forms.gle/JSdZQPEU7GqKc2mT7">Fill out this Google Form</a> or <a href="https://github.com/andykamath/blmandme">PR on GitHub</a></h4>
+    <h6>Made with <i class="fa fa-heart red-text"></i> in New Jersey</h6> -->
+</div>

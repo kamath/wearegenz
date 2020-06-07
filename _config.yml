@@ -1,0 +1,77 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: We Are Generation Z.
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  We will be heard.
+baseurl: "/blmandme" # the subpath of your site, e.g. /blog
+url: "andykamath.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+permalink: /:title:output_ext
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+# collections:
+#   vivek:
+#     name: "Vivek Pandit"
+#     instagram: "vivekpandit108"
+#     twitter: "We_Are_Gen_Z"
+#     img: "https://pbs.twimg.com/profile_images/1269090589313765376/XRfo0ueD_400x400.jpg"
+#   devonte:
+#     name: "Devonte Kavanaugh"
+#     instagram: "tekavmusic"
+#     twitter: ""
+#     img: "https://instagram.fewr1-5.fna.fbcdn.net/v/t51.2885-19/s320x320/89306157_624791311676567_7226510280585379840_n.jpg?_nc_ht=instagram.fewr1-5.fna.fbcdn.net&_nc_ohc=n63CGNUZLgoAX9s2pVg&oh=010c95e44a5b7af4f3c3b317d061c273&oe=5F045698"
+#   andy:
+#     name: "Andy Kamath"
+#     instagram: "andykamath"
+#     twitter: "baesedandy"
+#     img: "https://avatars1.githubusercontent.com/u/7597423?s=460&u=77bbd561ff7e7e640a53a1a0aaf79e148ea6ea33&v=4"
+
+collections:
+  links:
+    sms: true
+    email: true
+    website: true
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
